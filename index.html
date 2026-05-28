@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Софья Бычкова — IT-Юрист & Специалист по кибербезопасности | Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- Подключение современных премиальных шрифтов из Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка сайта с навигацией -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#about" class="logo">S.B. <span>LegalTech</span></a>
+            <div class="header-controls">
+                <nav class="nav" id="main-nav">
+                    <a href="#about" class="nav-link">Обо мне</a>
+                    <a href="#skills" class="nav-link">Навыки</a>
+                    <a href="#projects" class="nav-link">Проекты</a>
+                    <a href="#risk-assessment" class="nav-link">Аудит рисков</a>
+                    <a href="#contacts" class="nav-link btn-nav">Связаться</a>
+                </nav>
+                
+                <!-- Переключатель темы -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <!-- Иконка будет вставлена через JS -->
+                </button>
+                
+                <!-- Гамбургер меню -->
+                <button id="hamburger-menu" class="hamburger" aria-label="Открыть мобильное меню">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран (Hero Section) -->
+        <section class="hero" id="about">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <span class="badge">Студентка ТУСУР & IT-Академии</span>
+                    <h1 class="hero-title">Софья Бычкова</h1>
+                    <p class="hero-subtitle">Начинающий специалист в сфере правового регулирования цифровых технологий, IT-юриспруденции и информационной безопасности.</p>
+                    <p class="hero-description">Я объединяю глубокие знания в области классического права с пониманием сетевых протоколов, алгоритмов и информационной безопасности. Помогаю IT-продуктам оставаться в правовом поле, защищаю интеллектуальную собственность и анализирую киберинциденты.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Смотреть проекты</a>
+                        <a href="#contacts" class="btn btn-secondary">Связаться со мной</a>
+                    </div>
+                </div>
+                
+                <!-- Визуальный блок с фотографией -->
+                <div class="hero-visual">
+                    <div class="photo-frame">
+                        <div class="photo-glow"></div>
+                        <!-- Если sofia.jpg нет, покажется стильный градиент с инициалами -->
+                        <img src="sofia.jpg" alt="Софья Бычкова" class="profile-photo" onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';">
+                        <div id="photo-placeholder" class="profile-photo-placeholder">
+                            <span>СВ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел Навыков (Skills Section) -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">Сферы компетенций</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="3" x2="12" y2="21"></line>
+                                <line x1="6" y1="7" x2="18" y2="7"></line>
+                                <path d="M6 7l-3 9h6Z"></path>
+                                <path d="M18 7l-3 9h6Z"></path>
+                                <path d="M4 21h16"></path>
+                            </svg>
+                        </div>
+                        <h3>IT-Юриспруденция</h3>
+                        <p>Правовое сопровождение цифровых платформ, защита персональных данных (ФЗ-152), составление пользовательских соглашений и оценка юридической чистоты продуктов.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Анализ киберпреступлений</h3>
+                        <p>Квалификация инцидентов в сфере компьютерных преступлений по Главе 28 УК РФ (ст. 272, 273, 274.1), взаимодействие в рамках правового анализа взломов.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="5" r="3"></circle>
+                                <circle cx="5" cy="19" r="3"></circle>
+                                <circle cx="19" cy="19" r="3"></circle>
+                                <line x1="12" y1="8" x2="6.5" y2="16.5"></line>
+                                <line x1="12" y1="8" x2="17.5" y2="16.5"></line>
+                                <line x1="8" y1="19" x2="16" y2="19"></line>
+                            </svg>
+                        </div>
+                        <h3>Сетевые технологии</h3>
+                        <p>Понимание структуры URL-адресов, принципов шифрования данных, работы защищенного протокола HTTPS и уязвимостей веб-приложений.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                        </div>
+                        <h3>Основы алгоритмизации</h3>
+                        <p>Проектирование и описание жизненных алгоритмов, составление блок-схем по ГОСТ 19.701-90, понимание логических циклов и ветвлений.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел Проектов (Projects Section) -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Выполненные проекты</h2>
+                <p class="section-subtitle">Практические академические работы, подготовленные в рамках обучения на стыке юриспруденции и IT-технологий.</p>
+                
+                <div class="projects-list">
+                    <!-- Проект 1 -->
+                    <article class="project-item">
+                        <div class="project-info">
+                            <span class="project-tag">Уголовное право в IT</span>
+                            <h3>Правовая квалификация компьютерных преступлений</h3>
+                            <p>Комплексный юридический анализ и квалификация практических кейсов по Главе 28 УК РФ. Оценка неправомерного доступа к охраняемой информации и атак на критическую инфраструктуру (КИИ РФ).</p>
+                            <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/867fa77884d5df68b64b1f4df4df22be1b8a82cf/" class="project-link" target="_blank">Изучить статью 272 УК РФ на КонсультантПлюс &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Проект 2 -->
+                    <article class="project-item">
+                        <div class="project-info">
+                            <span class="project-tag">Образование</span>
+                            <h3>ФГБОУ ВО «ТУСУР»</h3>
+                            <p>Обучение на технической специальности в одном из ведущих вузов Сибири в области систем управления, радиоэлектроники и информационной безопасности.</p>
+                            <a href="https://tusur.ru" class="project-link" target="_blank">Официальный сайт ТУСУР &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Проект 3 -->
+                    <article class="project-item">
+                        <div class="project-info">
+                            <span class="project-tag">Сетевая безопасность</span>
+                            <h3>Технический разбор и аудит веб-соединений</h3>
+                            <p>Изучение и практическое применение принципов шифрования данных, работы защищенного протокола HTTPS и аудита URL-адресов на предмет информационной безопасности.</p>
+                            <a href="https://ru.wikipedia.org/wiki/HTTPS" class="project-link" target="_blank">Подробнее о протоколе шифрования HTTPS &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел Экспресс-Аудита Рисков (Risk Assessment Section) -->
+        <section class="risk-assessment" id="risk-assessment">
+            <div class="container">
+                <h2 class="section-title">Legal & Cyber Security Экспресс-Аудит</h2>
+                <p class="section-subtitle">Оцените уровень юридических и цифровых рисков вашего интернет-проекта за 1 минуту. Отметьте параметры, которые уже реализованы в вашем продукте:</p>
+                
+                <div class="risk-widget">
+                    <div class="risk-form-container">
+                        <form id="risk-form" onsubmit="return false;">
+                            <div class="checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="check-https" checked>
+                                    <span class="checkmark"></span>
+                                    <div class="checkbox-label-text">
+                                        <strong>Сайт работает по безопасному протоколу HTTPS</strong>
+                                        <span>Наличие действующего SSL-сертификата для шифрования трафика.</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="check-pdata">
+                                    <span class="checkmark"></span>
+                                    <div class="checkbox-label-text">
+                                        <strong>На сайте собираются персональные данные (ФЗ-152)</strong>
+                                        <span>Есть формы регистрации, обратной связи или подписки, запрашивающие ФИО, телефон, email.</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="check-agreement">
+                                    <span class="checkmark"></span>
+                                    <div class="checkbox-label-text">
+                                        <strong>Опубликована Политика конфиденциальности и Пользовательское соглашение</strong>
+                                        <span>Юридические документы доступны для ознакомления в подвале сайта.</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="check-passwords" checked>
+                                    <span class="checkmark"></span>
+                                    <div class="checkbox-label-text">
+                                        <strong>Пароли пользователей хешируются при хранении</strong>
+                                        <span>В базе данных не хранятся пароли в открытом (читаемом) виде.</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="check-cookies" checked>
+                                    <span class="checkmark"></span>
+                                    <div class="checkbox-label-text">
+                                        <strong>Настроено уведомление об использовании файлов Cookie</strong>
+                                        <span>Пользователи видят баннер-согласие со ссылкой на правила использования Cookie.</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="check-inputs">
+                                    <span class="checkmark"></span>
+                                    <div class="checkbox-label-text">
+                                        <strong>Реализована валидация и очистка вводимых данных</strong>
+                                        <span>Формы защищены от внедрения SQL-инъекций и вредоносных скриптов (XSS).</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <button type="button" id="calculate-risk-btn" class="btn btn-primary btn-block">Запустить экспресс-аудит</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Сюда JS выведет результаты -->
+                    <div class="risk-results-container" id="risk-results">
+                        <div class="risk-placeholder">
+                            <div class="shield-animation">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h3>Готов к сканированию</h3>
+                            <p>Выберите реализованные меры безопасности слева и нажмите кнопку для расчета уровня рисков и получения рекомендаций юриста.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел Контактов (Contacts Section) -->
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь со мной</h2>
+                <div class="contacts-grid">
+                    <!-- Левая колонка: Информация -->
+                    <div class="contacts-info">
+                        <p class="contacts-text">Я открыта к новым учебным проектам, стажировкам в сфере LegalTech и обсуждению юридических аспектов информационной безопасности.</p>
+                        
+                        <div class="contact-links-list">
+                            <div class="contact-item-row">
+                                <div class="contact-icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="contact-label">Telegram</span>
+                                    <a href="https://t.me/sova_172" class="contact-value" target="_blank">@sova_172</a>
+                                </div>
+                            </div>
+                            <div class="contact-item-row">
+                                <div class="contact-icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.513-.743.675-1.021.675-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752.324 0 .882.164 2.183 1.417 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931-.197-.615-.907-1.51-1.849-2.569-.512-.604-1.277-1.254-1.51-1.579-.325-.419-.231-.604 0-.976.001.001 2.672-3.761 2.95-5.04z" /></svg>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="contact-label">ВКонтакте</span>
+                                    <a href="https://vk.ru/id403016793" class="contact-value" target="_blank">vk.com/id403016793</a>
+                                </div>
+                            </div>
+                            <div class="contact-item-row">
+                                <div class="contact-icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="contact-label">Локация</span>
+                                    <span class="contact-value">г. Томск, ТУСУР</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Правая колонка: Форма связи -->
+                    <div class="contact-form-card">
+                        <h4>Отправить запрос на консультацию</h4>
+                        <form id="portfolio-contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="form-name">Ваше имя *</label>
+                                <input type="text" id="form-name" placeholder="Иван Ivanov" required autocomplete="name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-contact">Telegram / Email / VK для связи *</label>
+                                <input type="text" id="form-contact" placeholder="@username или email@example.com" required autocomplete="contact">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-message">Опишите ваш проект или вопрос *</label>
+                                <textarea id="form-message" rows="4" placeholder="Здравствуйте! Мне необходима разработка политики конфиденциальности для мобильного приложения..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit btn-block">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал (Footer) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Софья Бычкова. Все права защищены.</p>
+            <p class="footer-note">Разработано с использованием нативного HTML5, CSS3 и JavaScript.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
